@@ -17,10 +17,13 @@ const GRADIENT_DEFAULT =
   ' radial-gradient(circle at 40% 40%, #BFBFBF 5%, #BFBFBF00 15%),' +
   ' radial-gradient(circle at 60% 60%, #A3A3A3 10%, #A3A3A300 20%),' +
   ' radial-gradient(circle at 40% 60%, #FFFFFF 10%, #FFFFFF00 20%),' +
-  ' repeating-conic-gradient(from 236.84deg at 50% 50%, #FFFFFF 0%, #BFBFBF calc(25%/var(--repeating-conic-gradient-times)), #A3A3A3 calc(50%/var(--repeating-conic-gradient-times)), #BFBFBF calc(75%/var(--repeating-conic-gradient-times)), #FFFFFF calc(100%/var(--repeating-conic-gradient-times)))'
+  ' repeating-conic-gradient(from 236.84deg at 50% 50%, #FFFFFF 0%, #BFBFBF calc(25% / var(--repeating-conic-gradient-times)), #A3A3A3 calc(50% / var(--repeating-conic-gradient-times)), #BFBFBF calc(75% / var(--repeating-conic-gradient-times)), #FFFFFF calc(100% / var(--repeating-conic-gradient-times)))'
 
 const GRADIENT_WHITE =
-  'repeating-conic-gradient(from 236.84deg at 50% 50%, #FFFFFF, #FFFFFF calc(25%/var(--repeating-conic-gradient-times)))'
+  'repeating-conic-gradient(from 236.84deg at 50% 50%, #FFFFFF, #FFFFFF calc(25% / var(--repeating-conic-gradient-times)))'
+
+const MASK_IMAGE =
+  'linear-gradient(#0000, #0000), conic-gradient(from calc((var(--start) - var(--spread)) * 1deg), #00000000 0deg, #fff, #00000000 calc(var(--spread) * 2deg))'
 
 export function GlowingEffect({
   blur = 0,
@@ -96,6 +99,34 @@ export function GlowingEffect({
 
   const gradient = variant === 'white' ? GRADIENT_WHITE : GRADIENT_DEFAULT
 
+  const wrapperStyle = {
+    '--blur': `${blur}px`,
+    '--spread': spread,
+    '--start': '0',
+    '--active': '0',
+    '--glowingeffect-border-width': `${borderWidth}px`,
+    '--repeating-conic-gradient-times': '5',
+    '--gradient': gradient,
+    filter: blur > 0 ? `blur(${blur}px)` : undefined,
+  } as CSSProperties
+
+  const glowStyle: CSSProperties = {
+    position: 'absolute',
+    inset: 'calc(-1 * var(--glowingeffect-border-width))',
+    borderRadius: 'inherit',
+    border: 'var(--glowingeffect-border-width) solid transparent',
+    background: 'var(--gradient)',
+    backgroundAttachment: 'fixed',
+    opacity: 'var(--active)' as unknown as number,
+    transition: 'opacity 300ms ease',
+    maskImage: MASK_IMAGE,
+    WebkitMaskImage: MASK_IMAGE,
+    maskClip: 'padding-box, border-box',
+    WebkitMaskClip: 'padding-box, border-box',
+    maskComposite: 'intersect',
+    WebkitMaskComposite: 'source-in',
+  }
+
   return (
     <>
       <div
@@ -105,26 +136,12 @@ export function GlowingEffect({
       />
       <div
         ref={elRef}
-        style={
-          {
-            '--blur': `${blur}px`,
-            '--spread': spread,
-            '--start': '0',
-            '--active': '0',
-            '--glowingeffect-border-width': `${borderWidth}px`,
-            '--repeating-conic-gradient-times': '5',
-            '--gradient': gradient,
-          } as CSSProperties
-        }
+        style={wrapperStyle}
         className={`pointer-events-none absolute inset-0 rounded-[inherit] ${
-          blur > 0 ? 'blur-[var(--blur)]' : ''
-        } ${disabled ? 'hidden' : ''} ${className}`}
+          disabled ? 'hidden' : ''
+        } ${className}`}
       >
-        <div
-          className={
-            "glow rounded-[inherit] after:content-[''] after:rounded-[inherit] after:absolute after:inset-[calc(-1*var(--glowingeffect-border-width))] after:[border:var(--glowingeffect-border-width)_solid_transparent] after:[background:var(--gradient)] after:[background-attachment:fixed] after:opacity-[var(--active)] after:transition-opacity after:duration-300 after:[mask-clip:padding-box,border-box] after:[mask-composite:intersect] after:[mask-image:linear-gradient(#0000,#0000),conic-gradient(from_calc((var(--start)-var(--spread))*1deg),#00000000_0deg,#fff,#00000000_calc(var(--spread)*2deg))]"
-          }
-        />
+        <div style={glowStyle} aria-hidden />
       </div>
     </>
   )
