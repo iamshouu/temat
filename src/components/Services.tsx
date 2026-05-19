@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import { motion } from 'motion/react'
+import { TELEGRAM_URL } from '../config'
 import { SectionLabel } from './SectionLabel'
 import { TracingBeam } from './TracingBeam'
 import { ServiceCard } from './ServiceCard'
@@ -12,6 +13,7 @@ const SERVICES = [
     body: 'Лендинги, многостраничные и корпоративные сайты, бренд-страницы, marketing-сайты. Тёмные, адаптивные, с motion-анимациями и интеграцией форм в CRM или Telegram.',
     image: '/services/landing.jpg',
     badge: 'опт от 10 шт',
+    tgNote: 'отдельные задачи — в лс',
   },
   {
     id: '02',
@@ -92,15 +94,28 @@ export function Services() {
                 transition={{ duration: 0.9, delay: 0.2 + (i % 2) * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className={`hidden md:flex flex-col gap-3 ${titlePos[i]}`}
               >
-                <h3
-                  className="font-manrope font-extrabold leading-[0.95] tracking-[-0.02em] text-text"
-                  style={{
-                    fontSize: 'clamp(40px, 5vw, 84px)',
-                    textWrap: 'balance',
-                  }}
-                >
-                  {s.title}
-                </h3>
+                <div className={`flex items-start gap-6 ${i % 2 === 0 ? 'justify-between flex-row' : 'justify-between flex-row-reverse'}`}>
+                  <h3
+                    className="font-manrope font-extrabold leading-[0.95] tracking-[-0.02em] text-text"
+                    style={{
+                      fontSize: 'clamp(40px, 5vw, 84px)',
+                      textWrap: 'balance',
+                    }}
+                  >
+                    {s.title}
+                  </h3>
+                  {(s as { tgNote?: string }).tgNote && (
+                    <a
+                      href={TELEGRAM_URL}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-3 flex-shrink-0 inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-bg bg-text px-3.5 py-2.5 rounded-full whitespace-nowrap hover:bg-white transition-colors"
+                    >
+                      {(s as { tgNote?: string }).tgNote}
+                      <span aria-hidden>↗</span>
+                    </a>
+                  )}
+                </div>
                 <span className="font-mono text-[12px] uppercase tracking-[0.25em] text-muted">
                   {s.sub}
                 </span>
