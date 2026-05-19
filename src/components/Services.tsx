@@ -11,6 +11,7 @@ const SERVICES = [
     sub: 'от 5 дней',
     body: 'Лендинги, многостраничные и корпоративные сайты, бренд-страницы, marketing-сайты. Тёмные, адаптивные, с motion-анимациями и интеграцией форм в CRM или Telegram.',
     image: '/services/landing.jpg',
+    badge: 'опт от 10 шт',
   },
   {
     id: '02',
@@ -80,6 +81,7 @@ export function Services() {
                   title={s.title}
                   body={s.body}
                   image={s.image}
+                  badge={(s as { badge?: string }).badge}
                 />
               </motion.div>
 

@@ -4,9 +4,10 @@ type Props = {
   title: string
   body: string
   image: string
+  badge?: string
 }
 
-export function ServiceCard({ title, body, image }: Props) {
+export function ServiceCard({ title, body, image, badge }: Props) {
   return (
     <article className="relative aspect-square w-full rounded-3xl border border-white/[0.08] p-2 md:p-3">
       <GlowingEffect
@@ -22,6 +23,20 @@ export function ServiceCard({ title, body, image }: Props) {
         className="relative h-full w-full rounded-2xl overflow-hidden"
         style={{ background: '#000000' }}
       >
+        {/* Pill-бэдж в правом верхнем углу */}
+        {badge && (
+          <span
+            className="absolute top-4 md:top-5 right-4 md:right-5 z-30 font-mono text-[10px] uppercase tracking-[0.22em] text-white px-3 py-1.5 rounded-full border border-white/20"
+            style={{
+              background: 'rgba(0,0,0,0.55)',
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
+            }}
+          >
+            {badge}
+          </span>
+        )}
+
         {/* Image — верхняя часть карточки, абсолютно позиционирована */}
         <div className="absolute inset-x-0 top-0 h-[62%] overflow-hidden">
           <img
