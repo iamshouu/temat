@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { SectionLabel } from './SectionLabel'
 
 export function About() {
   return (
@@ -6,14 +7,7 @@ export function About() {
       id="about"
       className="relative px-6 md:px-12 py-32 md:py-48 border-t border-muted/20"
     >
-      <div className="mb-16 md:mb-24 flex items-start justify-between gap-8">
-        <div className="font-mono text-[12px] uppercase tracking-[0.3em] text-muted">
-          04 / о мне
-        </div>
-        <div className="hidden md:block font-mono text-[12px] uppercase tracking-[0.3em] text-muted">
-          — Даня
-        </div>
-      </div>
+      <SectionLabel label="о мне" count="— Даня" />
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
         <motion.h2

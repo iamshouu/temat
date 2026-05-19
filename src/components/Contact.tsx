@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { TELEGRAM_HANDLE, TELEGRAM_URL } from '../config'
+import { SectionLabel } from './SectionLabel'
 
 export function Contact() {
   return (
@@ -7,14 +8,7 @@ export function Contact() {
       id="contact"
       className="relative px-6 md:px-12 py-32 md:py-48 border-t border-muted/20"
     >
-      <div className="mb-16 md:mb-24 flex items-start justify-between gap-8">
-        <div className="font-mono text-[12px] uppercase tracking-[0.3em] text-muted">
-          05 / контакты
-        </div>
-        <div className="hidden md:block font-mono text-[12px] uppercase tracking-[0.3em] text-muted">
-          один канал
-        </div>
-      </div>
+      <SectionLabel label="контакты" count="один канал" />
 
       <motion.h2
         initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}

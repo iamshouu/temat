@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { SectionLabel } from './SectionLabel'
 
 const SERVICES = [
   {
@@ -30,14 +31,7 @@ const SERVICES = [
 export function Services() {
   return (
     <section id="services" className="relative px-6 md:px-12 py-32 md:py-48">
-      <div className="mb-16 md:mb-24 flex items-start justify-between gap-8">
-        <div className="font-mono text-[12px] uppercase tracking-[0.3em] text-muted">
-          01 / услуги
-        </div>
-        <div className="hidden md:block font-mono text-[12px] uppercase tracking-[0.3em] text-muted">
-          (4)
-        </div>
-      </div>
+      <SectionLabel label="услуги" count="(4)" />
 
       <h2
         className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-20 md:mb-32"

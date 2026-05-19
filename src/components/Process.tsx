@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { SectionLabel } from './SectionLabel'
 
 const STEPS = [
   {
@@ -34,14 +35,7 @@ export function Process() {
       id="process"
       className="relative px-6 md:px-12 py-32 md:py-48 border-t border-muted/20"
     >
-      <div className="mb-16 md:mb-24 flex items-start justify-between gap-8">
-        <div className="font-mono text-[12px] uppercase tracking-[0.3em] text-muted">
-          03 / процесс
-        </div>
-        <div className="hidden md:block font-mono text-[12px] uppercase tracking-[0.3em] text-muted">
-          5 шагов
-        </div>
-      </div>
+      <SectionLabel label="процесс" count="5 шагов" />
 
       <h2
         className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-20 md:mb-32"
