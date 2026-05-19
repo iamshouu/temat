@@ -124,7 +124,6 @@ export function Services() {
                   {s.sub}
                 </span>
 
-                {/* декоративная стрелка к карточке */}
                 <svg
                   aria-hidden
                   width="180"

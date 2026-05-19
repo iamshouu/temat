@@ -84,7 +84,6 @@ export function Process() {
       <div className="mx-auto max-w-3xl flex flex-col gap-10 md:gap-12 px-2 md:px-0">
         {EXCHANGES.map((ex, i) => (
           <div key={ex.step} className="flex flex-col gap-2">
-            {/* разделитель этапа */}
             <div className="flex items-center gap-4 mb-3">
               <div className="font-mono text-[11px] uppercase tracking-[0.3em] text-muted">
                 {ex.step} / {ex.stage.toLowerCase()}
@@ -92,7 +91,6 @@ export function Process() {
               <div className="flex-1 h-px bg-muted/25" />
             </div>
 
-            {/* обмен сообщениями */}
             <div className="flex flex-col gap-4">
               <ChatBubble
                 role="client"

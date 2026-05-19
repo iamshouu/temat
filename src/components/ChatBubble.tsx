@@ -21,7 +21,6 @@ export function ChatBubble({ role, name, avatar, time, children, delay = 0 }: Pr
       transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
       className={`flex items-end gap-3 ${isDev ? 'flex-row-reverse' : 'flex-row'} max-w-[80%] ${isDev ? 'self-end' : 'self-start'}`}
     >
-      {/* avatar */}
       <div
         className={`flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full text-[11px] font-mono uppercase tracking-wider ${
           isDev
