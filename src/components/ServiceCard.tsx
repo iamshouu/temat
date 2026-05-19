@@ -20,7 +20,7 @@ export function ServiceCard({ title, body, image }: Props) {
 
       <div
         className="relative h-full w-full rounded-2xl overflow-hidden"
-        style={{ background: '#0E0E0E' }}
+        style={{ background: '#000000' }}
       >
         {/* Image — верхняя часть карточки, абсолютно позиционирована */}
         <div className="absolute inset-x-0 top-0 h-[62%] overflow-hidden">
@@ -35,7 +35,7 @@ export function ServiceCard({ title, body, image }: Props) {
             className="absolute inset-x-0 bottom-0 h-3/5 pointer-events-none"
             style={{
               background:
-                'linear-gradient(to top, #0E0E0E 0%, #0E0E0E 18%, rgba(14,14,14,0.85) 45%, rgba(14,14,14,0.4) 75%, transparent 100%)',
+                'linear-gradient(to top, #000000 0%, #000000 18%, rgba(0,0,0,0.85) 45%, rgba(0,0,0,0.4) 75%, transparent 100%)',
             }}
           />
         </div>
