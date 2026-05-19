@@ -24,7 +24,7 @@ export function Hero() {
       />
       <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-bg via-bg/60 to-transparent pointer-events-none" />
 
-      <div className="relative z-10 flex h-full flex-col justify-between p-6 pt-28 md:p-12 md:pt-32">
+      <div className="relative z-10 grid h-full grid-rows-[auto_1fr_auto] p-6 pt-28 md:p-12 md:pt-32">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -34,43 +34,38 @@ export function Hero() {
           TEMAT // FOUNDED · 2025 —
         </motion.div>
 
-        <div className="flex flex-col gap-10 max-w-6xl pb-12 md:pb-20">
+        <div className="flex items-center justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-light leading-[0.95] tracking-tight"
-            style={{ fontSize: 'clamp(56px, 12vw, 180px)' }}
+            className="font-display uppercase text-center leading-[0.85] tracking-tight"
+            style={{ fontSize: 'clamp(48px, 11vw, 160px)' }}
           >
-            <span className="block">Сайты для тех,</span>
-            <span
-              className="block italic pl-[12%] md:pl-[28%]"
-              style={{ fontVariationSettings: '"SOFT" 100' }}
-            >
-              кто торгует.
-            </span>
+            <span className="block">Мы оптимизируем</span>
+            <span className="block">все.</span>
           </motion.h1>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8"
-          >
-            <p className="font-mono text-[12px] uppercase tracking-[0.15em] text-text/60 max-w-md">
-              Landing / Bot / CRM / Custom — built fast, built dark.
-            </p>
-
-            <a
-              href={TELEGRAM_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="group inline-flex items-center gap-3 border border-accent px-6 py-3 font-mono text-[12px] uppercase tracking-[0.2em] text-accent transition-colors duration-300 hover:bg-accent hover:text-bg"
-            >
-              [ написать в telegram&nbsp;→ ]
-            </a>
-          </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 pb-2 md:pb-6"
+        >
+          <p className="font-mono text-[12px] uppercase tracking-[0.15em] text-text/60 max-w-md">
+            Landing / Bot / CRM / Custom — built fast, built dark.
+          </p>
+
+          <a
+            href={TELEGRAM_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="group inline-flex items-center gap-3 border border-accent px-6 py-3 font-mono text-[12px] uppercase tracking-[0.2em] text-accent transition-colors duration-300 hover:bg-accent hover:text-bg"
+          >
+            [ написать в telegram&nbsp;→ ]
+          </a>
+        </motion.div>
       </div>
 
       <motion.div

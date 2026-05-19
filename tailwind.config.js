@@ -11,7 +11,7 @@ export default {
         surface: '#13110F',
       },
       fontFamily: {
-        display: ['Fraunces', 'serif'],
+        display: ['Anton', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
