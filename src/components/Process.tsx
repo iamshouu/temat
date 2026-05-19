@@ -9,41 +9,51 @@ type Exchange = {
   dev: string
 }
 
-const EXCHANGES: Exchange[] = [
+type DevContent = { text?: string; link?: string }
+
+type ExchangeNew = {
+  step: string
+  stage: string
+  time: string
+  client: string
+  dev: DevContent
+}
+
+const EXCHANGES: ExchangeNew[] = [
   {
     step: '01',
     stage: 'Бриф',
     time: '14:02',
-    client: 'Привет. Нужен сайт под курс по трейдингу. Темный, премиум.',
-    dev: 'Привет 👋 Созвонимся 15 минут — разберу задачу, зафиксируем сроки и цену.',
+    client: 'Привет, нужен сайт под курс по трейдингу, свободен?',
+    dev: { text: 'Привет, да, созвонимся, либо скинь тз — разберём задачу и цену обсудим.' },
   },
   {
     step: '02',
     stage: 'Концепт',
-    time: '14:48',
-    client: 'Ок, что дальше? Хочу понять как это будет выглядеть.',
-    dev: 'Завтра пришлю скетчи + мудборд. Цвета, шрифты, тональность — согласуем направление.',
+    time: '17:30',
+    client: 'Окей, а можно будет посмотреть как сайт будет выглядеть?',
+    dev: { text: 'Да, завтра пришлю скетчи — цвета, шрифты и тд.' },
   },
   {
     step: '03',
     stage: 'Демо',
-    time: '16:21',
-    client: 'А кликнуть можно? Хочется потрогать.',
-    dev: 'Готовлю прототип ключевых экранов. Покликаешь, скажешь правки — до зелёного света.',
+    time: '12:45',
+    client: 'Привет, ну что там, демо готово?',
+    dev: { link: 'shou.dev/preview/trader-course' },
   },
   {
     step: '04',
-    stage: 'Сборка',
-    time: '11:09',
-    client: 'Когда финал? Уже хочется.',
-    dev: 'Финальная вёрстка, motion, интеграция форм / CRM / ботов. Каждый день апдейт — без молчания.',
+    stage: 'Правки',
+    time: '17:08',
+    client: 'Неплохо, но есть что поправить, созвонимся?',
+    dev: { text: 'Да, давай.' },
   },
   {
     step: '05',
     stage: 'Сдача',
-    time: '19:34',
+    time: '10:15',
     client: 'Запускаем?',
-    dev: 'Деплой готов, доки рядом, инструкция по правкам. Месяц поддержки в подарок ✦',
+    dev: { text: 'Деплой готов, вот инструкция по правкам, и месяц поддержки в подарок ✦' },
   },
 ]
 
@@ -95,7 +105,16 @@ export function Process() {
                 time={ex.time}
                 delay={i * 0.05 + 0.15}
               >
-                {ex.dev}
+                {ex.dev.link ? (
+                  <a
+                    href="#"
+                    className="font-mono text-[14px] underline decoration-bg/40 underline-offset-2 hover:decoration-bg"
+                  >
+                    {ex.dev.link}
+                  </a>
+                ) : (
+                  ex.dev.text
+                )}
               </ChatBubble>
             </div>
           </div>
