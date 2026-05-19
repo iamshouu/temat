@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { SectionLabel } from './SectionLabel'
+import { TracingBeam } from './TracingBeam'
 
 const SERVICES = [
   {
@@ -31,6 +32,7 @@ const SERVICES = [
 export function Services() {
   return (
     <section id="services" className="relative px-6 md:px-12 py-32 md:py-48">
+      <TracingBeam className="pl-10 md:pl-16">
       <SectionLabel label="услуги" count="(4)" />
 
       <h2
@@ -79,6 +81,7 @@ export function Services() {
           )
         })}
       </div>
+      </TracingBeam>
     </section>
   )
 }
