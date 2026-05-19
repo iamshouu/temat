@@ -10,7 +10,7 @@ export function About() {
     >
       <SectionLabel label="о нас" count="by shou" />
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 md:items-center">
         <motion.h2
           initial={{ opacity: 0, y: 60, scale: 0.94, filter: 'blur(14px)' }}
           whileInView={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
