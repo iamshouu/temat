@@ -1,0 +1,13 @@
+export const TELEGRAM_URL = 'https://t.me/Danya_shouuu'
+export const TELEGRAM_HANDLE = '@Danya_shouuu'
+export const BRAND = 'TEMAT founded'
+
+export const SECTIONS = [
+  { id: 'services', label: 'услуги' },
+  { id: 'cases', label: 'кейсы' },
+  { id: 'process', label: 'процесс' },
+  { id: 'about', label: 'о мне' },
+  { id: 'contact', label: 'контакты' },
+] as const
+
+export type SectionId = (typeof SECTIONS)[number]['id']
