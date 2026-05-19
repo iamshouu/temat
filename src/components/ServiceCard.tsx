@@ -8,18 +8,18 @@ type Props = {
 
 export function ServiceCard({ title, body, sub }: Props) {
   return (
-    <article className="relative aspect-square w-full rounded-3xl border border-white/[0.06] p-[2px] overflow-hidden">
+    <article className="relative aspect-square w-full rounded-3xl border border-white/[0.08] p-2 md:p-3">
       <GlowingEffect
         spread={40}
         glow
         disabled={false}
         proximity={64}
         inactiveZone={0.01}
-        borderWidth={2}
+        borderWidth={3}
       />
 
       <div
-        className="relative h-full w-full rounded-[1.35rem] p-8 md:p-10 flex flex-col justify-between overflow-hidden"
+        className="relative h-full w-full rounded-2xl p-6 md:p-8 flex flex-col justify-between overflow-hidden"
         style={{
           background:
             'linear-gradient(160deg, #1A1A1A 0%, #131313 50%, #0E0E0E 100%)',
