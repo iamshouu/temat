@@ -9,3 +9,8 @@ dist-ssr
 *.log
 .env
 .env.local
+
+# typescript build artifacts (we don't emit, but tsc -b drops these)
+*.tsbuildinfo
+vite.config.d.ts
+vite.config.js
