@@ -4,7 +4,6 @@ export const BRAND = 'TEMAT founded'
 
 export const SECTIONS = [
   { id: 'services', label: 'услуги' },
-  { id: 'cases', label: 'кейсы' },
   { id: 'process', label: 'процесс' },
   { id: 'about', label: 'о мне' },
   { id: 'contact', label: 'контакты' },

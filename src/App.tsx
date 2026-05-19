@@ -1,7 +1,6 @@
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Services } from './components/Services'
-import { Cases } from './components/Cases'
 import { Process } from './components/Process'
 import { About } from './components/About'
 import { Contact } from './components/Contact'
@@ -13,7 +12,6 @@ export default function App() {
       <main>
         <Hero />
         <Services />
-        <Cases />
         <Process />
         <About />
         <Contact />
