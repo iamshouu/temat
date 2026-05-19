@@ -35,21 +35,41 @@ export function Hero() {
         </motion.div>
 
         <div className="flex items-center justify-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
-            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-            transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-black uppercase text-center leading-[0.9] tracking-[-0.02em] bg-clip-text text-transparent"
-            style={{
-              fontSize: 'clamp(40px, 9vw, 128px)',
-              fontVariationSettings: '"opsz" 32, "wght" 900',
-              backgroundImage:
-                'linear-gradient(to top, #FFFFFF 0%, #FFFFFF 25%, #BFBFBF 70%, #8A8A8A 100%)',
-            }}
-          >
-            <span className="block">Мы оптимизируем</span>
-            <span className="block">всё.</span>
-          </motion.h1>
+          <div className="relative">
+            <motion.h1
+              initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
+              className="font-display font-black uppercase text-center leading-[0.9] tracking-[-0.02em] bg-clip-text text-transparent"
+              style={{
+                fontSize: 'clamp(40px, 9vw, 128px)',
+                fontVariationSettings: '"opsz" 32, "wght" 900',
+                backgroundImage:
+                  'linear-gradient(to top, #FFFFFF 0%, #FFFFFF 25%, #BFBFBF 70%, #8A8A8A 100%)',
+              }}
+            >
+              <span className="block">Мы оптимизируем</span>
+              <span className="block">всё.</span>
+            </motion.h1>
+
+            <motion.span
+              initial={{ opacity: 0, rotate: -2, x: 30 }}
+              animate={{ opacity: 1, rotate: -8, x: 0 }}
+              transition={{ duration: 1.0, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="font-script absolute pointer-events-none select-none text-text/95"
+              style={{
+                right: 'clamp(-72px, -6vw, -36px)',
+                bottom: 'clamp(-8px, 1vw, 12px)',
+                fontSize: 'clamp(36px, 5vw, 84px)',
+                fontWeight: 700,
+                lineHeight: 1,
+                transformOrigin: 'left center',
+                textShadow: '0 2px 24px rgba(10,10,10,0.6)',
+              }}
+            >
+              by shou
+            </motion.span>
+          </div>
         </div>
 
         <motion.div

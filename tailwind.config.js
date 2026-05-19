@@ -14,6 +14,7 @@ export default {
         display: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        script: ['Caveat', 'cursive'],
       },
     },
   },
