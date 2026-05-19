@@ -48,8 +48,8 @@ export function Services() {
           fontVariationSettings: '"opsz" 24, "wght" 900',
         }}
       >
-        <span className="block">Что я</span>
-        <span className="block pl-[20%]">делаю.</span>
+        <span className="block">Что мы</span>
+        <span className="block pl-[20%]">делаем.</span>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-8 md:px-[3%] lg:px-[5%]">
