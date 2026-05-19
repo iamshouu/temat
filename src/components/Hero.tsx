@@ -24,16 +24,7 @@ export function Hero() {
       />
       <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-bg via-bg/60 to-transparent pointer-events-none" />
 
-      <div className="relative z-10 grid h-full grid-rows-[auto_1fr_auto] p-6 pt-28 md:p-12 md:pt-32">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-mono text-[11px] uppercase tracking-[0.3em] text-text/60"
-        >
-          TEMAT // FOUNDED · 2025 —
-        </motion.div>
-
+      <div className="relative z-10 grid h-full grid-rows-[1fr_auto] p-6 pt-28 md:p-12 md:pt-32">
         <div className="flex items-center justify-center">
           <div className="relative">
             <motion.h1
