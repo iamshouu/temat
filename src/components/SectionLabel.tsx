@@ -5,20 +5,20 @@ type Props = {
 
 export function SectionLabel({ label, count }: Props) {
   return (
-    <div className="mb-16 md:mb-24 flex items-start justify-between gap-8">
-      <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.3em] text-muted">
+    <div className="mb-16 md:mb-24 flex items-start justify-between gap-8 md:pl-[8%] lg:pl-[12%]">
+      <div className="flex items-center gap-5 md:gap-6 font-mono text-[15px] md:text-[17px] uppercase tracking-[0.22em] text-text">
         <svg
-          width="48"
-          height="22"
+          width="84"
+          height="38"
           viewBox="0 0 48 22"
           fill="none"
           aria-hidden
-          className="text-accent shrink-0"
+          className="text-text shrink-0"
         >
           <path
             d="M2 3 C 2 16, 16 18, 38 18 M30 12 L 40 18 L 30 23"
             stroke="currentColor"
-            strokeWidth="1.25"
+            strokeWidth="1.5"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
