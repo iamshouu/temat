@@ -1,0 +1,93 @@
+import { motion } from 'motion/react'
+import { TELEGRAM_URL } from '../config'
+
+export function Hero() {
+  return (
+    <section id="top" className="relative h-[100svh] w-full overflow-hidden">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster=""
+        className="absolute inset-0 h-full w-full object-cover"
+      >
+        <source src="/hero.mp4" type="video/mp4" />
+      </video>
+
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse at center, transparent 0%, rgba(10,9,8,0.45) 55%, rgba(10,9,8,0.9) 100%)',
+        }}
+      />
+      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-bg via-bg/60 to-transparent pointer-events-none" />
+
+      <div className="relative z-10 flex h-full flex-col justify-between p-6 pt-28 md:p-12 md:pt-32">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="font-mono text-[11px] uppercase tracking-[0.3em] text-text/60"
+        >
+          TEMAT // FOUNDED · 2025 —
+        </motion.div>
+
+        <div className="flex flex-col gap-10 max-w-6xl pb-12 md:pb-20">
+          <motion.h1
+            initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
+            className="font-display font-light leading-[0.95] tracking-tight"
+            style={{ fontSize: 'clamp(56px, 12vw, 180px)' }}
+          >
+            <span className="block">Сайты для тех,</span>
+            <span
+              className="block italic pl-[12%] md:pl-[28%]"
+              style={{ fontVariationSettings: '"SOFT" 100' }}
+            >
+              кто торгует.
+            </span>
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8"
+          >
+            <p className="font-mono text-[12px] uppercase tracking-[0.15em] text-text/60 max-w-md">
+              Landing / Bot / CRM / Custom — built fast, built dark.
+            </p>
+
+            <a
+              href={TELEGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-3 border border-accent px-6 py-3 font-mono text-[12px] uppercase tracking-[0.2em] text-accent transition-colors duration-300 hover:bg-accent hover:text-bg"
+            >
+              [ написать в telegram&nbsp;→ ]
+            </a>
+          </motion.div>
+        </div>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.4, duration: 0.6 }}
+        className="absolute bottom-8 right-6 md:right-12 z-10 hidden sm:flex flex-col items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-text/50"
+      >
+        <span style={{ writingMode: 'vertical-rl' }}>scroll ↓</span>
+        <div className="relative h-[60px] w-px bg-muted/50 overflow-hidden">
+          <motion.div
+            className="absolute inset-x-0 h-1/3 bg-accent"
+            animate={{ y: ['-100%', '300%'] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </div>
+      </motion.div>
+    </section>
+  )
+}

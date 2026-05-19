@@ -1,10 +1,12 @@
 import { Header } from './components/Header'
+import { Hero } from './components/Hero'
 
 export default function App() {
   return (
     <div className="min-h-screen bg-bg text-text overflow-x-hidden">
       <Header />
-      <main className="pt-32">
+      <main>
+        <Hero />
         <section id="services" className="h-screen flex items-center justify-center">
           <span className="font-mono text-muted">services placeholder</span>
         </section>
