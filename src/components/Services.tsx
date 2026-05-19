@@ -10,24 +10,28 @@ const SERVICES = [
     title: 'Лендинги',
     sub: '5–10 дней',
     body: 'Конверсионные лендинги под услугу, продукт или курс. Адаптивные, тёмные, с motion-секцией и формой в CRM/Telegram.',
+    image: '/services/landing.webp',
   },
   {
     id: '02',
     title: 'Telegram-боты',
     sub: 'сигналы / оплата / прогрев',
     body: 'Боты для приватных каналов, подписок, авто-сигналов и серий прогрева. Платежи через Stripe / CryptoCloud / ЮKassa.',
+    image: '/services/bot.jpg',
   },
   {
     id: '03',
     title: 'CRM (Bitrix / amoCRM)',
     sub: 'воронки, поля, дашборды',
     body: 'Настройка под команду трейдеров: кастомные поля сделок, авто-распределение лидов, отчёты для ментора.',
+    image: '/services/crm.jpg',
   },
   {
     id: '04',
     title: 'Индивидуальные решения',
     sub: 'по брифу',
     body: 'Дашборды, копитрейд-системы, личные кабинеты с подпиской, парсеры рынка. Обсуждаем под задачу.',
+    image: '/services/custom.jpg',
   },
 ]
 
@@ -48,7 +52,7 @@ export function Services() {
         <span className="block pl-[20%]">делаю.</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-8 md:px-[3%] lg:px-[5%]">
         {SERVICES.map((s, i) => {
           const cardPos = [
             'md:[grid-area:1/1] md:justify-self-start',
@@ -70,9 +74,14 @@ export function Services() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
-                className={`w-full md:max-w-[630px] ${cardPos[i]}`}
+                className={`w-full md:max-w-[560px] ${cardPos[i]}`}
               >
-                <ServiceCard title={s.title} sub={s.sub} body={s.body} />
+                <ServiceCard
+                  title={s.title}
+                  sub={s.sub}
+                  body={s.body}
+                  image={s.image}
+                />
               </motion.div>
 
               <motion.h3
