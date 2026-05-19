@@ -3,7 +3,7 @@ import { motion } from 'motion/react'
 const CASES = [
   {
     num: '01',
-    title: 'Signal-bot для приватного канала',
+    title: 'Бот-сигналы для приватного канала',
     year: '2025',
     tags: 'Telegram · TS · Stripe',
     metric: '+217%',
@@ -35,10 +35,10 @@ const CASES = [
   },
   {
     num: '05',
-    title: 'Copytrade-бот',
+    title: 'Копитрейд-бот',
     year: '2025',
     tags: 'Node · WebSocket',
-    metric: '<100ms',
+    metric: '<100мс',
     metricLabel: 'задержка дублирования',
   },
   {

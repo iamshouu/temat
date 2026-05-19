@@ -47,8 +47,8 @@ export function Hero() {
                 'linear-gradient(to top, #FFFFFF 0%, #FFFFFF 25%, #BFBFBF 70%, #8A8A8A 100%)',
             }}
           >
-            <span className="block">We optimize</span>
-            <span className="block">everything.</span>
+            <span className="block">Мы оптимизируем</span>
+            <span className="block">всё.</span>
           </motion.h1>
         </div>
 
@@ -59,7 +59,7 @@ export function Hero() {
           className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 pb-2 md:pb-6"
         >
           <p className="font-mono text-[12px] uppercase tracking-[0.15em] text-text/60 max-w-md">
-            Landing / Bot / CRM / Custom — built fast, built dark.
+            Лендинги / Боты / CRM / Кастом — быстро, темно.
           </p>
 
           <a
@@ -79,7 +79,7 @@ export function Hero() {
         transition={{ delay: 1.4, duration: 0.6 }}
         className="absolute bottom-8 right-6 md:right-12 z-10 hidden sm:flex flex-col items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-text/50"
       >
-        <span style={{ writingMode: 'vertical-rl' }}>scroll ↓</span>
+        <span style={{ writingMode: 'vertical-rl' }}>вниз ↓</span>
         <div className="relative h-[60px] w-px bg-muted/50 overflow-hidden">
           <motion.div
             className="absolute inset-x-0 h-1/3 bg-accent"

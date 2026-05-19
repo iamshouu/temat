@@ -1,16 +1,16 @@
 import { motion } from 'motion/react'
 
 const ITEMS = [
-  'LANDING',
-  'TELEGRAM BOT',
+  'ЛЕНДИНГИ',
+  'TELEGRAM-БОТЫ',
   'CRM',
   'AMOCRM',
-  'BITRIX',
-  'CUSTOM',
-  'DARK MODE',
-  'MOTION',
-  'EDITORIAL',
-  'PREMIUM',
+  'БИТРИКС',
+  'КАСТОМ',
+  'ТЁМНАЯ ТЕМА',
+  'АНИМАЦИЯ',
+  'ДИЗАЙН',
+  'ПРЕМИУМ',
 ]
 
 export function Marquee() {
