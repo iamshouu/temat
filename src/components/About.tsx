@@ -21,16 +21,14 @@ export function About() {
           whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="md:col-span-7 font-display font-light leading-[0.95]"
-          style={{ fontSize: 'clamp(40px, 5vw, 80px)' }}
+          className="md:col-span-7 font-display font-black uppercase leading-[0.9] tracking-[-0.02em]"
+          style={{
+            fontSize: 'clamp(40px, 5vw, 80px)',
+            fontVariationSettings: '"opsz" 24, "wght" 900',
+          }}
         >
           <span className="block">Не агентство.</span>
-          <span
-            className="block italic pl-[10%]"
-            style={{ fontVariationSettings: '"SOFT" 100' }}
-          >
-            Один человек,
-          </span>
+          <span className="block pl-[10%]">Один человек,</span>
           <span className="block pl-[20%]">один проект — рядом.</span>
         </motion.h2>
 

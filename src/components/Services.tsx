@@ -40,16 +40,14 @@ export function Services() {
       </div>
 
       <h2
-        className="font-display font-light leading-[0.95] mb-20 md:mb-32"
-        style={{ fontSize: 'clamp(48px, 8vw, 120px)' }}
+        className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-20 md:mb-32"
+        style={{
+          fontSize: 'clamp(48px, 8vw, 120px)',
+          fontVariationSettings: '"opsz" 24, "wght" 900',
+        }}
       >
         <span className="block">Что я</span>
-        <span
-          className="block italic pl-[20%]"
-          style={{ fontVariationSettings: '"SOFT" 100' }}
-        >
-          делаю.
-        </span>
+        <span className="block pl-[20%]">делаю.</span>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">

@@ -39,15 +39,16 @@ export function Hero() {
             initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display uppercase text-center leading-[0.9] tracking-tight bg-clip-text text-transparent"
+            className="font-display font-black uppercase text-center leading-[0.9] tracking-[-0.02em] bg-clip-text text-transparent"
             style={{
-              fontSize: 'clamp(48px, 11vw, 160px)',
+              fontSize: 'clamp(48px, 12vw, 180px)',
+              fontVariationSettings: '"opsz" 32, "wght" 900',
               backgroundImage:
                 'linear-gradient(to top, #FFFFFF 0%, #FFFFFF 25%, #BFBFBF 70%, #8A8A8A 100%)',
             }}
           >
-            <span className="block">Мы оптимизируем</span>
-            <span className="block">все.</span>
+            <span className="block">We optimize</span>
+            <span className="block">everything.</span>
           </motion.h1>
         </div>
 

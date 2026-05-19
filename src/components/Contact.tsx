@@ -21,16 +21,14 @@ export function Contact() {
         whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.9 }}
-        className="font-display font-light leading-[0.9] mb-12 md:mb-20"
-        style={{ fontSize: 'clamp(64px, 12vw, 180px)' }}
+        className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-12 md:mb-20"
+        style={{
+          fontSize: 'clamp(64px, 12vw, 180px)',
+          fontVariationSettings: '"opsz" 32, "wght" 900',
+        }}
       >
         <span className="block">Готов</span>
-        <span
-          className="block italic pl-[20%]"
-          style={{ fontVariationSettings: '"SOFT" 100' }}
-        >
-          обсудить?
-        </span>
+        <span className="block pl-[20%]">обсудить?</span>
       </motion.h2>
 
       <motion.a

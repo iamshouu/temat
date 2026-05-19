@@ -44,15 +44,13 @@ export function Process() {
       </div>
 
       <h2
-        className="font-display font-light leading-[0.95] mb-20 md:mb-32"
-        style={{ fontSize: 'clamp(48px, 8vw, 120px)' }}
+        className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-20 md:mb-32"
+        style={{
+          fontSize: 'clamp(48px, 8vw, 120px)',
+          fontVariationSettings: '"opsz" 24, "wght" 900',
+        }}
       >
-        <span
-          className="block italic"
-          style={{ fontVariationSettings: '"SOFT" 100' }}
-        >
-          Как
-        </span>
+        <span className="block">Как</span>
         <span className="block pl-[15%]">работаем.</span>
       </h2>
 
