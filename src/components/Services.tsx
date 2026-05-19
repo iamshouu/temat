@@ -42,7 +42,7 @@ export function Services() {
       <SectionLabel label="услуги" count="(4)" />
 
       <h2
-        className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-20 md:mb-32"
+        className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-20 md:mb-32 md:pl-[8%] lg:pl-[12%]"
         style={{
           fontSize: 'clamp(48px, 8vw, 120px)',
           fontVariationSettings: '"opsz" 24, "wght" 900',
