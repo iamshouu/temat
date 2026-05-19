@@ -20,36 +20,34 @@ export function ServiceCard({ title, body, sub, image }: Props) {
       />
 
       <div
-        className="relative h-full w-full rounded-2xl overflow-hidden flex flex-col"
-        style={{
-          background:
-            'linear-gradient(180deg, #131313 0%, #0E0E0E 100%)',
-        }}
+        className="relative h-full w-full rounded-2xl overflow-hidden"
+        style={{ background: '#0E0E0E' }}
       >
-        {/* Image — верхняя половина карточки */}
-        <div className="relative w-full h-[58%] overflow-hidden">
+        {/* мета поверх */}
+        <span className="absolute top-4 md:top-5 left-4 md:left-5 z-20 font-mono text-[11px] uppercase tracking-[0.22em] text-white/70">
+          {sub}
+        </span>
+
+        {/* Image — верхняя часть карточки, абсолютно позиционирована */}
+        <div className="absolute inset-x-0 top-0 h-[62%] overflow-hidden">
           <img
             src={image}
             alt=""
             loading="lazy"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          {/* плавный fade-out фотографии в bg-цвет внизу */}
+          {/* fade фотографии в bg-цвет — выходит за нижнюю границу image-области, чтобы не было стыка */}
           <div
-            className="absolute inset-x-0 bottom-0 h-3/4 pointer-events-none"
+            className="absolute inset-x-0 bottom-0 h-3/5 pointer-events-none"
             style={{
               background:
-                'linear-gradient(to top, #0E0E0E 0%, rgba(14,14,14,0.92) 25%, rgba(14,14,14,0.55) 55%, transparent 100%)',
+                'linear-gradient(to top, #0E0E0E 0%, #0E0E0E 18%, rgba(14,14,14,0.85) 45%, rgba(14,14,14,0.4) 75%, transparent 100%)',
             }}
           />
-          {/* мета поверх фото */}
-          <span className="absolute top-4 md:top-5 left-4 md:left-5 z-10 font-mono text-[11px] uppercase tracking-[0.22em] text-white/70">
-            {sub}
-          </span>
         </div>
 
-        {/* Текстовый блок — нижняя половина */}
-        <div className="relative flex-1 px-6 md:px-8 pb-6 md:pb-8 pt-2 flex flex-col justify-end gap-4">
+        {/* Текст — абсолютно прижат к низу карточки, лежит поверх solid bg */}
+        <div className="absolute inset-x-0 bottom-0 px-6 md:px-8 pb-6 md:pb-8 z-10 flex flex-col gap-4">
           <h3
             className="md:hidden font-display font-black uppercase tracking-[-0.02em] text-2xl leading-[0.95] text-text"
             style={{ fontVariationSettings: '"opsz" 24, "wght" 900' }}
