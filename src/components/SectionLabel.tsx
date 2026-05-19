@@ -1,3 +1,5 @@
+import { motion } from 'motion/react'
+
 type Props = {
   label: string
   count?: string
@@ -5,7 +7,13 @@ type Props = {
 
 export function SectionLabel({ label, count }: Props) {
   return (
-    <div className="mb-16 md:mb-24 flex items-start justify-between gap-8 md:pl-[8%] lg:pl-[12%]">
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className="mb-16 md:mb-24 flex items-start justify-between gap-8 md:pl-[8%] lg:pl-[12%]"
+    >
       <div className="flex items-center gap-5 md:gap-6 font-mono text-[15px] md:text-[17px] uppercase tracking-[0.22em] text-text">
         <svg
           width="84"
@@ -31,6 +39,6 @@ export function SectionLabel({ label, count }: Props) {
           {count}
         </div>
       )}
-    </div>
+    </motion.div>
   )
 }

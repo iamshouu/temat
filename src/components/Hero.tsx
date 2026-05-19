@@ -85,19 +85,35 @@ export function Hero() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.4, duration: 0.6 }}
-        className="absolute bottom-8 right-6 md:right-12 z-10 hidden sm:flex flex-col items-center gap-3 font-mono text-[10px] uppercase tracking-[0.3em] text-text/50"
+        className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-10 text-text/70"
+        aria-hidden
       >
-        <span style={{ writingMode: 'vertical-rl' }}>вниз ↓</span>
-        <div className="relative h-[60px] w-px bg-muted/50 overflow-hidden">
-          <motion.div
-            className="absolute inset-x-0 h-1/3 bg-accent"
-            animate={{ y: ['-100%', '300%'] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+        <svg width="26" height="42" viewBox="0 0 26 42" fill="none">
+          <rect
+            x="1.5"
+            y="1.5"
+            width="23"
+            height="39"
+            rx="11.5"
+            stroke="currentColor"
+            strokeWidth="1.5"
           />
-        </div>
+          <motion.line
+            x1="13"
+            y1="10"
+            x2="13"
+            y2="18"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            initial={{ opacity: 0.2 }}
+            animate={{ opacity: [0.2, 1, 0.2], y: [0, 4, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </svg>
       </motion.div>
     </section>
   )

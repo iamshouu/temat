@@ -44,7 +44,11 @@ export function Services() {
       <TracingBeam className="pl-6 md:pl-10">
       <SectionLabel label="услуги" count="(4)" />
 
-      <h2
+      <motion.h2
+        initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
+        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
         className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-20 md:mb-32 md:pl-[8%] lg:pl-[12%]"
         style={{
           fontSize: 'clamp(48px, 8vw, 120px)',
@@ -53,7 +57,7 @@ export function Services() {
       >
         <span className="block">Что мы</span>
         <span className="block pl-[20%]">делаем.</span>
-      </h2>
+      </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-8 md:px-[3%] lg:px-[5%]">
         {SERVICES.map((s, i) => {

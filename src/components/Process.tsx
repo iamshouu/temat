@@ -1,3 +1,4 @@
+import { motion } from 'motion/react'
 import { SectionLabel } from './SectionLabel'
 import { ChatBubble } from './ChatBubble'
 
@@ -65,7 +66,11 @@ export function Process() {
     >
       <SectionLabel label="процесс" count="5 шагов" />
 
-      <h2
+      <motion.h2
+        initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
+        whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
         className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-20 md:mb-32 md:pl-[8%] lg:pl-[12%]"
         style={{
           fontSize: 'clamp(48px, 8vw, 120px)',
@@ -74,7 +79,7 @@ export function Process() {
       >
         <span className="block">Как</span>
         <span className="block pl-[15%]">работаем.</span>
-      </h2>
+      </motion.h2>
 
       <div className="mx-auto max-w-3xl flex flex-col gap-10 md:gap-12 px-2 md:px-0">
         {EXCHANGES.map((ex, i) => (
