@@ -16,7 +16,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-          className="md:col-span-7 md:pl-[10%] lg:pl-[16%] font-script italic leading-[0.9] bg-clip-text text-transparent select-none"
+          className="md:col-span-7 md:pl-[10%] lg:pl-[16%] font-script italic leading-[0.7] bg-clip-text text-transparent select-none"
           style={{
             fontSize: 'clamp(140px, 22vw, 320px)',
             fontWeight: 700,
