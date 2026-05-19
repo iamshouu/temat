@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { TELEGRAM_URL } from '../config'
 import { SectionLabel } from './SectionLabel'
 
 export function About() {
@@ -7,7 +8,7 @@ export function About() {
       id="about"
       className="relative px-6 md:px-12 py-32 md:py-48 border-t border-muted/20"
     >
-      <SectionLabel label="о мне" count="— Даня" />
+      <SectionLabel label="о мне" count="by shou" />
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
         <motion.h2
@@ -22,8 +23,8 @@ export function About() {
           }}
         >
           <span className="block">Не агентство.</span>
-          <span className="block pl-[10%]">Один человек,</span>
-          <span className="block pl-[20%]">один проект — рядом.</span>
+          <span className="block pl-[10%]">И не один.</span>
+          <span className="block pl-[20%]">Просто рядом.</span>
         </motion.h2>
 
         <motion.div
@@ -31,19 +32,31 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="md:col-span-4 md:col-start-9 flex flex-col gap-6 font-sans text-text/80 leading-relaxed"
+          className="md:col-span-4 md:col-start-9 flex flex-col gap-6 font-sans text-text/85 leading-relaxed"
         >
           <p>
-            Делаю сайты, ботов и кастомные тулзы для трейдеров — тех, кто торгует и
-            кому нужен инструмент, а не «как у всех». Без агентств, без менеджеров,
-            без бюрократии.
+            Форекс-трейдер и разработчик проектов. Понимаем систему арбитража
+            изнутри — торгуем в плюс, участвуем в развитии Telegram-каналов,
+            собираем под трейдеров инструменты, которых нет на рынке.
           </p>
           <p>
-            Каждый проект веду сам: от первого скетча до деплоя. Спокойно отвечаю в
-            Telegram, держу сроки, не теряюсь после оплаты.
+            Делаем сайты, ботов и кастомные тулзы. Каждый проект ведём сами —
+            без агентских прокладок, без потерянной темы и без молчания после
+            оплаты.
           </p>
+
+          <a
+            href={TELEGRAM_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="self-start inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-bg bg-text px-3.5 py-2.5 rounded-full whitespace-nowrap hover:bg-white transition-colors"
+          >
+            открыты к вашим проектам — в лс
+            <span aria-hidden>↗</span>
+          </a>
+
           <p className="font-mono text-[12px] uppercase tracking-[0.2em] text-muted pt-4 border-t border-muted/20">
-            — Даня, shou/web
+            — by shou
           </p>
         </motion.div>
       </div>
