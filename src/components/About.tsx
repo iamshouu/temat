@@ -25,7 +25,7 @@ export function About() {
             filter: 'drop-shadow(0 8px 32px rgba(255,255,255,0.08))',
           }}
         >
-          shou
+          shou.co
         </motion.h2>
 
         <motion.div
