@@ -7,9 +7,9 @@ import { ServiceCard } from './ServiceCard'
 const SERVICES = [
   {
     id: '01',
-    title: 'Лендинги',
-    sub: '5–10 дней',
-    body: 'Конверсионные лендинги под услугу, продукт или курс. Адаптивные, тёмные, с motion-секцией и формой в CRM/Telegram.',
+    title: 'Сайты',
+    sub: 'от 5 дней',
+    body: 'Лендинги, многостраничные и корпоративные сайты, бренд-страницы, marketing-сайты. Тёмные, адаптивные, с motion-анимациями и интеграцией форм в CRM или Telegram.',
     image: '/services/landing.jpg',
   },
   {
