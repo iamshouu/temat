@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { motion } from 'motion/react'
 import { SectionLabel } from './SectionLabel'
 import { TracingBeam } from './TracingBeam'
@@ -49,23 +50,45 @@ export function Services() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-8 md:px-[10%] lg:px-[14%]">
         {SERVICES.map((s, i) => {
-          const positions = [
+          const cardPos = [
             'md:[grid-area:1/1] md:justify-self-start',
             'md:[grid-area:2/2] md:justify-self-end',
             'md:[grid-area:3/1] md:justify-self-start',
             'md:[grid-area:4/2] md:justify-self-end',
           ]
+          const titlePos = [
+            'md:[grid-area:1/2] md:justify-self-start md:self-center md:pl-6 lg:pl-10 md:text-left',
+            'md:[grid-area:2/1] md:justify-self-end md:self-center md:pr-6 lg:pr-10 md:text-right',
+            'md:[grid-area:3/2] md:justify-self-start md:self-center md:pl-6 lg:pl-10 md:text-left',
+            'md:[grid-area:4/1] md:justify-self-end md:self-center md:pr-6 lg:pr-10 md:text-right',
+          ]
           return (
-          <motion.div
-            key={s.id}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
-            className={`w-full md:max-w-[420px] ${positions[i]}`}
-          >
-            <ServiceCard title={s.title} sub={s.sub} body={s.body} />
-          </motion.div>
+            <Fragment key={s.id}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
+                className={`w-full md:max-w-[420px] ${cardPos[i]}`}
+              >
+                <ServiceCard title={s.title} sub={s.sub} body={s.body} />
+              </motion.div>
+
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.7, delay: 0.15 + (i % 2) * 0.1 }}
+                className={`hidden md:block font-display font-black uppercase tracking-[-0.02em] leading-[0.92] text-text ${titlePos[i]}`}
+                style={{
+                  fontSize: 'clamp(36px, 4.2vw, 72px)',
+                  fontVariationSettings: '"opsz" 32, "wght" 900',
+                  textWrap: 'balance',
+                }}
+              >
+                {s.title}
+              </motion.h3>
+            </Fragment>
           )
         })}
       </div>

@@ -31,7 +31,7 @@ export function ServiceCard({ title, body, sub }: Props) {
 
         <div className="relative z-10 flex flex-col gap-5">
           <h3
-            className="font-display font-black uppercase tracking-[-0.02em] text-3xl md:text-4xl leading-[0.95] text-text"
+            className="md:hidden font-display font-black uppercase tracking-[-0.02em] text-3xl leading-[0.95] text-text"
             style={{ fontVariationSettings: '"opsz" 24, "wght" 900' }}
           >
             {title}
