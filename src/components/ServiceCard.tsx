@@ -1,100 +1,68 @@
-import { motion } from 'motion/react'
+import type { ReactNode } from 'react'
 
 type Props = {
   num: string
   title: string
-  sub: string
   body: string
+  sub: string
+  icon: ReactNode
 }
 
-export function ServiceCard({ num, title, sub, body }: Props) {
+export function ServiceCard({ num, title, body, sub, icon }: Props) {
   return (
-    <div
-      className="relative w-full aspect-square rounded-[10px] p-px overflow-hidden"
-      style={{
-        background: 'radial-gradient(circle 280px at 0% 0%, #FFFFFF, #0C0D0D)',
-      }}
-    >
-      {/* Точка, обегающая периметр карточки */}
-      <motion.span
+    <article className="group relative aspect-square w-full overflow-hidden border border-muted/25 bg-bg transition-colors duration-500 hover:border-muted">
+      {/* угол-подсветка на hover */}
+      <div
         aria-hidden
-        className="absolute z-30 rounded-full bg-white"
+        className="pointer-events-none absolute -top-1/3 -left-1/3 h-[140%] w-[140%] opacity-0 transition-opacity duration-700 group-hover:opacity-100"
         style={{
-          width: 6,
-          height: 6,
-          boxShadow: '0 0 12px rgba(255,255,255,0.9)',
+          background:
+            'radial-gradient(circle at 30% 30%, rgba(237,237,237,0.06), transparent 55%)',
         }}
-        animate={{
-          top: ['10%', '10%', 'calc(100% - 30px)', 'calc(100% - 30px)', '10%'],
-          right: ['10%', 'calc(100% - 35px)', 'calc(100% - 35px)', '10%', '10%'],
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
       />
 
-      {/* Внутренняя карточка */}
-      <div
-        className="relative h-full w-full overflow-hidden rounded-[9px] border border-[#202222] p-6 md:p-8 flex flex-col justify-between text-white"
+      {/* фоновая огромная цифра outline */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -top-2 left-3 md:-top-4 md:left-4 select-none font-display leading-none"
         style={{
-          background: 'radial-gradient(circle 320px at 0% 0%, #444444, #0C0D0D)',
+          fontSize: 'clamp(150px, 28vw, 280px)',
+          fontWeight: 900,
+          fontVariationSettings: '"opsz" 32, "wght" 900',
+          color: 'transparent',
+          WebkitTextStroke: '1px #3D3D3D',
         }}
       >
-        {/* Размытый ray-glow в верхне-левой части */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute"
-          style={{
-            width: 220,
-            height: 45,
-            borderRadius: 100,
-            backgroundColor: '#C7C7C7',
-            opacity: 0.4,
-            boxShadow: '0 0 50px #FFFFFF',
-            filter: 'blur(10px)',
-            transformOrigin: '10%',
-            top: 0,
-            left: 0,
-            transform: 'rotate(40deg)',
-          }}
-        />
+        {num}
+      </span>
 
-        {/* Декоративные линии — верх / низ / лево / право, на 10% от краёв */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute left-0 top-[10%] h-px w-full"
-          style={{ background: 'linear-gradient(90deg, #888888 30%, #1D1F1F 70%)' }}
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute left-0 bottom-[10%] h-px w-full bg-[#2C2C2C]"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute left-[10%] top-0 h-full w-px"
-          style={{ background: 'linear-gradient(180deg, #747474 30%, #222424 70%)' }}
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute right-[10%] top-0 h-full w-px bg-[#2C2C2C]"
-        />
-
-        {/* Мета-строка */}
-        <div className="relative z-10 flex items-baseline justify-between gap-4 pt-[4%]">
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/55">
-            {num} / {title.toLowerCase()}
-          </span>
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/55 text-right">
-            {sub}
-          </span>
-        </div>
-
-        {/* Заголовок + описание */}
-        <div className="relative z-10 flex flex-col gap-4 pb-[4%] pl-[6%]">
-          <h3 className="font-display font-light text-3xl md:text-4xl leading-tight text-white">
-            {title}
-          </h3>
-          <p className="text-white/65 text-sm leading-relaxed max-w-[80%]">{body}</p>
-        </div>
+      {/* иконка в правом верхнем углу */}
+      <div className="absolute top-5 right-5 md:top-6 md:right-6 text-text/70 group-hover:text-text transition-colors duration-500">
+        {icon}
       </div>
-    </div>
+
+      {/* служебная горизонтальная линия */}
+      <div
+        aria-hidden
+        className="absolute left-5 right-5 md:left-6 md:right-6 top-[55%] h-px bg-muted/25"
+      />
+
+      {/* контент в нижней части */}
+      <div className="absolute right-5 md:right-6 bottom-5 md:bottom-6 left-5 md:left-6 flex flex-col gap-3 items-end text-right">
+        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted">
+          {sub}
+        </span>
+        <h3
+          className="font-display font-black uppercase tracking-[-0.02em] text-2xl md:text-3xl leading-[0.95]"
+          style={{ fontVariationSettings: '"opsz" 24, "wght" 900' }}
+        >
+          {title}
+        </h3>
+        <div className="h-px w-10 bg-muted/50" />
+        <p className="text-[13px] text-text/65 leading-relaxed max-w-[85%]">
+          {body}
+        </p>
+      </div>
+    </article>
   )
 }
