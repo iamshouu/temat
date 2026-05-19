@@ -15,10 +15,12 @@ export function Contact() {
         whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.9 }}
-        className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-12 md:mb-20"
+        className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-12 md:mb-20 bg-clip-text text-transparent"
         style={{
           fontSize: 'clamp(64px, 12vw, 180px)',
           fontVariationSettings: '"opsz" 32, "wght" 900',
+          backgroundImage:
+            'linear-gradient(to top, #FFFFFF 0%, #FFFFFF 25%, #BFBFBF 70%, #8A8A8A 100%)',
         }}
       >
         <span className="block">Готов</span>
