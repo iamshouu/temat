@@ -115,14 +115,14 @@ export function Services() {
                   className={`mt-6 text-muted ${i % 2 === 0 ? 'self-start' : 'self-end -scale-x-100'}`}
                 >
                   <path
-                    d="M 168 12 C 132 12, 88 30, 28 80"
+                    d="M 168 12 C 168 60, 100 90, 28 80"
                     stroke="currentColor"
                     strokeWidth="1.75"
                     strokeLinecap="round"
                     fill="none"
                   />
                   <path
-                    d="M 50 76 L 28 80 L 36 59"
+                    d="M 48 72 L 28 80 L 45 94"
                     stroke="currentColor"
                     strokeWidth="1.75"
                     strokeLinecap="round"
