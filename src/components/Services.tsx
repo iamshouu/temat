@@ -10,7 +10,7 @@ const SERVICES = [
     title: 'Лендинги',
     sub: '5–10 дней',
     body: 'Конверсионные лендинги под услугу, продукт или курс. Адаптивные, тёмные, с motion-секцией и формой в CRM/Telegram.',
-    image: '/services/landing.webp',
+    image: '/services/landing.jpg',
   },
   {
     id: '02',
