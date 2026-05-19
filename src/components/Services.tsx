@@ -104,6 +104,24 @@ export function Services() {
                 <span className="font-mono text-[12px] uppercase tracking-[0.25em] text-muted">
                   {s.sub}
                 </span>
+
+                {/* декоративная стрелка к карточке */}
+                <svg
+                  aria-hidden
+                  width="160"
+                  height="90"
+                  viewBox="0 0 160 90"
+                  fill="none"
+                  className={`mt-4 text-muted/70 ${i % 2 === 0 ? '-scale-x-100 self-start' : 'self-end'}`}
+                >
+                  <path
+                    d="M 150 8 C 110 14, 75 32, 24 70 M 36 60 L 20 74 L 30 84"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </motion.div>
             </Fragment>
           )
