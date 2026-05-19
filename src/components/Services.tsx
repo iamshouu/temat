@@ -78,25 +78,31 @@ export function Services() {
               >
                 <ServiceCard
                   title={s.title}
-                  sub={s.sub}
                   body={s.body}
                   image={s.image}
                 />
               </motion.div>
 
-              <motion.h3
+              <motion.div
                 initial={{ opacity: 0, y: 20, rotate: 0 }}
                 whileInView={{ opacity: 1, y: 0, rotate: titleRotations[i] }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.9, delay: 0.2 + (i % 2) * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className={`hidden md:block font-serif italic font-medium leading-[0.95] text-text ${titlePos[i]}`}
-                style={{
-                  fontSize: 'clamp(40px, 5vw, 88px)',
-                  textWrap: 'balance',
-                }}
+                className={`hidden md:flex flex-col gap-3 ${titlePos[i]}`}
               >
-                {s.title}
-              </motion.h3>
+                <h3
+                  className="font-manrope font-extrabold leading-[0.95] tracking-[-0.02em] text-text"
+                  style={{
+                    fontSize: 'clamp(40px, 5vw, 84px)',
+                    textWrap: 'balance',
+                  }}
+                >
+                  {s.title}
+                </h3>
+                <span className="font-mono text-[12px] uppercase tracking-[0.25em] text-muted">
+                  {s.sub}
+                </span>
+              </motion.div>
             </Fragment>
           )
         })}

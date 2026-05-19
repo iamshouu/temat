@@ -16,6 +16,7 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         script: ['Caveat', 'cursive'],
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        manrope: ['Manrope', 'system-ui', 'sans-serif'],
       },
     },
   },

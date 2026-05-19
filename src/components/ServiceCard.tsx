@@ -3,11 +3,10 @@ import { GlowingEffect } from './GlowingEffect'
 type Props = {
   title: string
   body: string
-  sub: string
   image: string
 }
 
-export function ServiceCard({ title, body, sub, image }: Props) {
+export function ServiceCard({ title, body, image }: Props) {
   return (
     <article className="relative aspect-square w-full rounded-3xl border border-white/[0.08] p-2 md:p-3">
       <GlowingEffect
@@ -23,11 +22,6 @@ export function ServiceCard({ title, body, sub, image }: Props) {
         className="relative h-full w-full rounded-2xl overflow-hidden"
         style={{ background: '#0E0E0E' }}
       >
-        {/* мета поверх */}
-        <span className="absolute top-4 md:top-5 left-4 md:left-5 z-20 font-mono text-[11px] uppercase tracking-[0.22em] text-white/70">
-          {sub}
-        </span>
-
         {/* Image — верхняя часть карточки, абсолютно позиционирована */}
         <div className="absolute inset-x-0 top-0 h-[62%] overflow-hidden">
           <img
