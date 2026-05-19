@@ -5,13 +5,15 @@ import { SectionLabel } from './SectionLabel'
 import { TracingBeam } from './TracingBeam'
 import { ServiceCard } from './ServiceCard'
 
+const B = import.meta.env.BASE_URL
+
 const SERVICES = [
   {
     id: '01',
     title: 'Сайты',
     sub: 'от 5 дней',
     body: 'Лендинги, многостраничные и корпоративные сайты, бренд-страницы, marketing-сайты. Тёмные, адаптивные, с motion-анимациями и интеграцией форм в CRM или Telegram.',
-    image: '/services/landing.jpg',
+    image: `${B}services/landing.jpg`,
     badge: 'опт от 10 шт',
     tgNote: 'отдельные задачи — в лс',
   },
@@ -20,21 +22,21 @@ const SERVICES = [
     title: 'Telegram-боты',
     sub: 'сигналы / оплата / прогрев',
     body: 'Боты для приватных каналов, подписок, авто-сигналов и серий прогрева. Платежи через Stripe / CryptoCloud / ЮKassa.',
-    image: '/services/bot.jpg',
+    image: `${B}services/bot.jpg`,
   },
   {
     id: '03',
     title: 'CRM (Bitrix / amoCRM)',
     sub: 'воронки, поля, дашборды',
     body: 'Настройка под команду трейдеров: кастомные поля сделок, авто-распределение лидов, отчёты для ментора.',
-    image: '/services/crm.jpg',
+    image: `${B}services/crm.jpg`,
   },
   {
     id: '04',
     title: 'Индивидуальные решения',
     sub: 'по брифу',
     body: 'Дашборды, копитрейд-системы, личные кабинеты с подпиской, парсеры рынка. Пишите — обсудим.',
-    image: '/services/custom.jpg',
+    image: `${B}services/custom.jpg`,
   },
 ]
 

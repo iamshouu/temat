@@ -12,7 +12,7 @@ export function Hero() {
         poster=""
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/hero.mp4" type="video/mp4" />
+        <source src={`${import.meta.env.BASE_URL}hero.mp4`} type="video/mp4" />
       </video>
 
       <div
