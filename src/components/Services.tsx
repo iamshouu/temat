@@ -34,7 +34,7 @@ const SERVICES = [
 export function Services() {
   return (
     <section id="services" className="relative px-6 md:px-12 py-32 md:py-48">
-      <TracingBeam className="pl-10 md:pl-16">
+      <TracingBeam className="pl-6 md:pl-10">
       <SectionLabel label="услуги" count="(4)" />
 
       <h2
@@ -48,7 +48,7 @@ export function Services() {
         <span className="block pl-[20%]">делаю.</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-8 md:px-[10%] lg:px-[14%]">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-8">
         {SERVICES.map((s, i) => {
           const cardPos = [
             'md:[grid-area:1/1] md:justify-self-start',
@@ -62,6 +62,7 @@ export function Services() {
             'md:[grid-area:3/2] md:justify-self-start md:self-center md:pl-6 lg:pl-10 md:text-left',
             'md:[grid-area:4/1] md:justify-self-end md:self-center md:pr-6 lg:pr-10 md:text-right',
           ]
+          const titleRotations = [-7, 5, -4, 6]
           return (
             <Fragment key={s.id}>
               <motion.div
@@ -69,20 +70,19 @@ export function Services() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
-                className={`w-full md:max-w-[420px] ${cardPos[i]}`}
+                className={`w-full md:max-w-[630px] ${cardPos[i]}`}
               >
                 <ServiceCard title={s.title} sub={s.sub} body={s.body} />
               </motion.div>
 
               <motion.h3
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20, rotate: 0 }}
+                whileInView={{ opacity: 1, y: 0, rotate: titleRotations[i] }}
                 viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.7, delay: 0.15 + (i % 2) * 0.1 }}
-                className={`hidden md:block font-display font-black uppercase tracking-[-0.02em] leading-[0.92] text-text ${titlePos[i]}`}
+                transition={{ duration: 0.9, delay: 0.2 + (i % 2) * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                className={`hidden md:block font-serif italic font-medium leading-[0.95] text-text ${titlePos[i]}`}
                 style={{
-                  fontSize: 'clamp(36px, 4.2vw, 72px)',
-                  fontVariationSettings: '"opsz" 32, "wght" 900',
+                  fontSize: 'clamp(40px, 5vw, 88px)',
                   textWrap: 'balance',
                 }}
               >
