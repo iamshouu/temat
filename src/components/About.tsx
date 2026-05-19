@@ -32,17 +32,13 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="md:col-span-4 md:col-start-9 flex flex-col gap-6 font-sans text-text/85 leading-relaxed"
+          className="md:col-span-5 md:col-start-8 flex flex-col gap-7 font-sans text-text/90"
         >
-          <p>
+          <p className="text-lg md:text-xl lg:text-[22px] leading-[1.55]">
             Форекс-трейдер и разработчик проектов. Понимаем систему арбитража
             изнутри — торгуем в плюс, участвуем в развитии Telegram-каналов,
-            собираем под трейдеров инструменты, которых нет на рынке.
-          </p>
-          <p>
-            Делаем сайты, ботов и кастомные тулзы. Каждый проект ведём сами —
-            без агентских прокладок, без потерянной темы и без молчания после
-            оплаты.
+            собираем под трейдеров инструменты, которых нет на рынке. Делаем
+            сайты, ботов и кастомные тулзы.
           </p>
 
           <a
