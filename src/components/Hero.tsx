@@ -41,7 +41,7 @@ export function Hero() {
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
             className="font-display font-black uppercase text-center leading-[0.9] tracking-[-0.02em] bg-clip-text text-transparent"
             style={{
-              fontSize: 'clamp(48px, 12vw, 180px)',
+              fontSize: 'clamp(40px, 9vw, 128px)',
               fontVariationSettings: '"opsz" 32, "wght" 900',
               backgroundImage:
                 'linear-gradient(to top, #FFFFFF 0%, #FFFFFF 25%, #BFBFBF 70%, #8A8A8A 100%)',
