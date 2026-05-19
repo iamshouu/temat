@@ -44,7 +44,7 @@ export function Services() {
         <span className="block pl-[20%]">делаю.</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-8 md:px-[10%] lg:px-[14%]">
         {SERVICES.map((s, i) => {
           const positions = [
             'md:[grid-area:1/1] md:justify-self-start',
