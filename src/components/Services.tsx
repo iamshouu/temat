@@ -44,7 +44,7 @@ export function Services() {
         <span className="block pl-[20%]">делаю.</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-8">
         {SERVICES.map((s, i) => {
           const positions = [
             'md:[grid-area:1/1]',
@@ -59,20 +59,22 @@ export function Services() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
-            className={`group relative border border-muted/30 bg-surface/40 p-8 md:p-12 transition-colors duration-300 hover:border-accent ${positions[i]}`}
+            className={`group relative aspect-square border border-muted/30 bg-surface/40 p-8 md:p-12 transition-colors duration-300 hover:border-accent flex flex-col justify-between ${positions[i]}`}
           >
-            <div className="flex items-baseline justify-between mb-10">
+            <div className="flex items-baseline justify-between gap-4">
               <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
                 {s.id} / {s.title.toLowerCase()}
               </span>
-              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted text-right">
                 {s.sub}
               </span>
             </div>
-            <h3 className="font-display font-light text-4xl md:text-5xl leading-tight mb-6 group-hover:text-accent transition-colors">
-              {s.title}
-            </h3>
-            <p className="text-text/70 leading-relaxed max-w-md">{s.body}</p>
+            <div className="flex flex-col gap-6">
+              <h3 className="font-display font-light text-4xl md:text-5xl leading-tight group-hover:text-accent transition-colors">
+                {s.title}
+              </h3>
+              <p className="text-text/70 leading-relaxed max-w-md">{s.body}</p>
+            </div>
           </motion.article>
           )
         })}
