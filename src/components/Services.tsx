@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { SectionLabel } from './SectionLabel'
 import { TracingBeam } from './TracingBeam'
-import { CardBody, CardContainer, CardItem } from './ThreeDCard'
+import { ServiceCard } from './ServiceCard'
 
 const SERVICES = [
   {
@@ -62,42 +62,9 @@ export function Services() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
-            className={`w-full ${positions[i]}`}
+            className={`w-full md:max-w-[420px] ${positions[i]}`}
           >
-            <CardContainer
-              containerClassName="w-full md:max-w-[420px]"
-              className="w-full"
-            >
-              <CardBody className="group relative aspect-square w-full border border-muted/30 bg-surface/40 p-8 md:p-10 transition-colors duration-300 hover:border-accent flex flex-col justify-between">
-                <CardItem
-                  translateZ={20}
-                  className="flex items-baseline justify-between gap-4 w-full"
-                >
-                  <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
-                    {s.id} / {s.title.toLowerCase()}
-                  </span>
-                  <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted text-right">
-                    {s.sub}
-                  </span>
-                </CardItem>
-                <div className="flex flex-col gap-6">
-                  <CardItem
-                    as="h3"
-                    translateZ={60}
-                    className="font-display font-light text-4xl md:text-5xl leading-tight group-hover:text-accent"
-                  >
-                    {s.title}
-                  </CardItem>
-                  <CardItem
-                    as="p"
-                    translateZ={30}
-                    className="text-text/70 leading-relaxed max-w-md"
-                  >
-                    {s.body}
-                  </CardItem>
-                </div>
-              </CardBody>
-            </CardContainer>
+            <ServiceCard num={s.id} title={s.title} sub={s.sub} body={s.body} />
           </motion.div>
           )
         })}
