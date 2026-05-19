@@ -44,18 +44,22 @@ export function Services() {
         <span className="block pl-[20%]">делаю.</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-        {SERVICES.map((s, i) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-6 md:gap-0">
+        {SERVICES.map((s, i) => {
+          const positions = [
+            'md:[grid-area:1/1]',
+            'md:[grid-area:2/2]',
+            'md:[grid-area:3/1]',
+            'md:[grid-area:4/2]',
+          ]
+          return (
           <motion.article
             key={s.id}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
-            whileHover={{ y: -6 }}
-            className={`group relative border border-muted/30 bg-surface/40 p-8 md:p-12 transition-colors duration-300 hover:border-accent ${
-              i % 2 === 1 ? 'md:translate-y-12' : ''
-            }`}
+            className={`group relative border border-muted/30 bg-surface/40 p-8 md:p-12 transition-colors duration-300 hover:border-accent ${positions[i]}`}
           >
             <div className="flex items-baseline justify-between mb-10">
               <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted">
@@ -70,7 +74,8 @@ export function Services() {
             </h3>
             <p className="text-text/70 leading-relaxed max-w-md">{s.body}</p>
           </motion.article>
-        ))}
+          )
+        })}
       </div>
     </section>
   )
