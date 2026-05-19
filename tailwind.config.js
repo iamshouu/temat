@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#0A0908',
-        text: '#EAE4D9',
-        accent: '#D4A574',
-        muted: '#5C5750',
-        surface: '#13110F',
+        bg: '#0A0A0A',
+        text: '#EDEDED',
+        accent: '#A3A3A3',
+        muted: '#525252',
+        surface: '#141414',
       },
       fontFamily: {
-        display: ['Anton', 'system-ui', 'sans-serif'],
+        display: ['"Archivo Black"', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },

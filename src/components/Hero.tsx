@@ -19,7 +19,7 @@ export function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse at center, transparent 0%, rgba(10,9,8,0.45) 55%, rgba(10,9,8,0.9) 100%)',
+            'radial-gradient(ellipse at center, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.7) 55%, rgba(10,10,10,0.95) 100%)',
         }}
       />
       <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-bg via-bg/60 to-transparent pointer-events-none" />
@@ -39,8 +39,12 @@ export function Hero() {
             initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display uppercase text-center leading-[0.85] tracking-tight"
-            style={{ fontSize: 'clamp(48px, 11vw, 160px)' }}
+            className="font-display uppercase text-center leading-[0.9] tracking-tight bg-clip-text text-transparent"
+            style={{
+              fontSize: 'clamp(48px, 11vw, 160px)',
+              backgroundImage:
+                'linear-gradient(to top, #FFFFFF 0%, #FFFFFF 25%, #BFBFBF 70%, #8A8A8A 100%)',
+            }}
           >
             <span className="block">Мы оптимизируем</span>
             <span className="block">все.</span>
