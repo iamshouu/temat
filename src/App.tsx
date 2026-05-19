@@ -1,5 +1,11 @@
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
+import { Marquee } from './components/Marquee'
+import { Services } from './components/Services'
+import { Cases } from './components/Cases'
+import { Process } from './components/Process'
+import { About } from './components/About'
+import { Contact } from './components/Contact'
 
 export default function App() {
   return (
@@ -7,21 +13,12 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <section id="services" className="h-screen flex items-center justify-center">
-          <span className="font-mono text-muted">services placeholder</span>
-        </section>
-        <section id="cases" className="h-screen flex items-center justify-center">
-          <span className="font-mono text-muted">cases placeholder</span>
-        </section>
-        <section id="process" className="h-screen flex items-center justify-center">
-          <span className="font-mono text-muted">process placeholder</span>
-        </section>
-        <section id="about" className="h-screen flex items-center justify-center">
-          <span className="font-mono text-muted">about placeholder</span>
-        </section>
-        <section id="contact" className="h-screen flex items-center justify-center">
-          <span className="font-mono text-muted">contact placeholder</span>
-        </section>
+        <Marquee />
+        <Services />
+        <Cases />
+        <Process />
+        <About />
+        <Contact />
       </main>
     </div>
   )
