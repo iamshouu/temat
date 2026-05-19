@@ -105,21 +105,22 @@ export function Services() {
                   {s.sub}
                 </span>
 
-                {/* декоративная стрелка к карточке */}
+                {/* декоративная стрелка-завиток к карточке */}
                 <svg
                   aria-hidden
-                  width="160"
-                  height="90"
-                  viewBox="0 0 160 90"
+                  width="200"
+                  height="110"
+                  viewBox="0 0 200 110"
                   fill="none"
-                  className={`mt-4 text-muted/70 ${i % 2 === 0 ? '-scale-x-100 self-start' : 'self-end'}`}
+                  className={`mt-6 text-muted ${i % 2 === 0 ? 'self-start' : 'self-end -scale-x-100'}`}
                 >
                   <path
-                    d="M 150 8 C 110 14, 75 32, 24 70 M 36 60 L 20 74 L 30 84"
+                    d="M 190 18 C 188 8, 178 4, 172 12 C 168 18, 174 26, 184 24 C 168 30, 130 36, 90 52 C 60 64, 38 80, 22 92 M 42 80 L 20 94 L 30 108"
                     stroke="currentColor"
-                    strokeWidth="1.5"
+                    strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    strokeMiterlimit="2"
                   />
                 </svg>
               </motion.div>
