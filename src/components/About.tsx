@@ -10,13 +10,13 @@ export function About() {
     >
       <SectionLabel label="о нас" count="by shou" />
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 md:items-center">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 md:items-start">
         <motion.h2
           initial={{ opacity: 0, y: 60, scale: 0.94, filter: 'blur(14px)' }}
           whileInView={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-          className="md:col-span-7 md:pl-[10%] lg:pl-[16%] font-script italic leading-[0.7] bg-clip-text text-transparent select-none"
+          className="md:col-span-7 md:pl-[10%] lg:pl-[16%] font-script italic leading-[0.7] -mt-[0.18em] bg-clip-text text-transparent select-none"
           style={{
             fontSize: 'clamp(140px, 22vw, 320px)',
             fontWeight: 700,
