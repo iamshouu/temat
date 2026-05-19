@@ -41,14 +41,14 @@ export function ServiceCard({ title, body, image }: Props) {
         </div>
 
         {/* Текст — абсолютно прижат к низу карточки, лежит поверх solid bg */}
-        <div className="absolute inset-x-0 bottom-0 px-6 md:px-8 pb-6 md:pb-8 z-10 flex flex-col gap-4">
+        <div className="absolute inset-x-0 bottom-0 px-7 md:px-9 pb-7 md:pb-9 z-10 flex flex-col gap-5">
           <h3
-            className="md:hidden font-display font-black uppercase tracking-[-0.02em] text-2xl leading-[0.95] text-text"
+            className="md:hidden font-display font-black uppercase tracking-[-0.02em] text-3xl leading-[0.95] text-text"
             style={{ fontVariationSettings: '"opsz" 24, "wght" 900' }}
           >
             {title}
           </h3>
-          <p className="text-sm md:text-base text-text/75 leading-relaxed max-w-[92%]">
+          <p className="text-[16px] md:text-[18px] text-text/90 leading-[1.55] max-w-[92%]">
             {body}
           </p>
         </div>
