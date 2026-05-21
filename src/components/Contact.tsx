@@ -54,7 +54,7 @@ export function Contact() {
 
       <footer className="pt-8 border-t border-muted/30 flex flex-col md:flex-row gap-4 md:gap-8 justify-between font-mono text-[11px] uppercase tracking-[0.25em] text-muted">
         <span>© 2025 — 2026</span>
-        <span>TEMAT founded</span>
+        <span>TematFoundation</span>
         <a
           href={TELEGRAM_URL}
           target="_blank"

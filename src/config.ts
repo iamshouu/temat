@@ -1,6 +1,6 @@
 export const TELEGRAM_URL = 'https://t.me/Danya_shouuu'
 export const TELEGRAM_HANDLE = '@Danya_shouuu'
-export const BRAND = 'TEMAT founded'
+export const BRAND = 'TematFoundation'
 
 export const SECTIONS = [
   { id: 'services', label: 'услуги' },
