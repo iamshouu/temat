@@ -30,10 +30,10 @@ export function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse at center, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.7) 55%, rgba(10,10,10,0.95) 100%)',
+            'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.45) 100%)',
         }}
       />
-      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-bg via-bg/60 to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-bg/85 via-bg/35 to-transparent pointer-events-none" />
 
       <div className="relative z-10 grid h-full grid-rows-[1fr_auto] p-6 pt-28 md:p-12 md:pt-32">
         <div className="flex items-center justify-center">
