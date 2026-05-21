@@ -27,9 +27,7 @@ export function Header() {
               <span key={s.id} className="flex items-center gap-3">
                 <a
                   href={`#${s.id}`}
-                  className={`transition-colors duration-300 hover:text-accent ${
-                    active === s.id ? 'text-accent' : 'text-text'
-                  }`}
+                  className="text-text hover:text-accent transition-colors duration-300"
                 >
                   {s.label}
                 </a>
