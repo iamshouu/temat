@@ -81,7 +81,7 @@ export function Hero() {
           className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 pb-2 md:pb-6"
         >
           <div className="flex flex-col gap-1.5 max-w-md font-mono text-[11px] uppercase tracking-[0.22em]">
-            <span className="text-text/80">разработка под трейдеров</span>
+            <span className="text-text/80">разработка проектов под:</span>
             <span className="text-text/45">
               сайты · боты · crm · кастомные тулзы
             </span>
