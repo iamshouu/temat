@@ -8,7 +8,7 @@ export function Contact() {
       id="contact"
       className="relative px-6 md:px-12 py-32 md:py-48 border-t border-muted/20"
     >
-      <SectionLabel label="контакты" count="один канал" />
+      <SectionLabel label="контакты" />
 
       <motion.h2
         initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}

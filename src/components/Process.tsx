@@ -64,7 +64,7 @@ export function Process() {
       id="process"
       className="relative px-6 md:px-12 py-32 md:py-48 border-t border-muted/20"
     >
-      <SectionLabel label="процесс" count="5 шагов" />
+      <SectionLabel label="процесс" />
 
       <motion.h2
         initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
