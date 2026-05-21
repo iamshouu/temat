@@ -1,16 +1,27 @@
 import { motion } from 'motion/react'
+import { useState } from 'react'
 import { TELEGRAM_URL } from '../config'
 
 export function Hero() {
+  const [videoReady, setVideoReady] = useState(false)
+
   return (
-    <section id="top" className="relative h-[100svh] w-full overflow-hidden">
+    <section id="top" className="relative h-[100svh] w-full overflow-hidden bg-bg">
+      <div
+        aria-hidden
+        className="absolute inset-0 hero-placeholder"
+        style={{ opacity: videoReady ? 0 : 1, transition: 'opacity 700ms ease-out' }}
+      />
+
       <video
         autoPlay
         muted
         loop
         playsInline
-        poster=""
-        className="absolute inset-0 h-full w-full object-cover"
+        preload="metadata"
+        onCanPlay={() => setVideoReady(true)}
+        className="absolute inset-0 h-full w-full object-cover transition-opacity duration-700"
+        style={{ opacity: videoReady ? 1 : 0 }}
       >
         <source src={`${import.meta.env.BASE_URL}hero.mp4`} type="video/mp4" />
       </video>

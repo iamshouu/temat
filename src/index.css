@@ -28,7 +28,29 @@ body {
   color: var(--bg);
 }
 
+.hero-placeholder {
+  background:
+    radial-gradient(ellipse 70% 50% at 20% 30%, rgba(80, 50, 90, 0.35), transparent 60%),
+    radial-gradient(ellipse 60% 60% at 80% 70%, rgba(40, 70, 110, 0.3), transparent 65%),
+    radial-gradient(ellipse 50% 40% at 50% 60%, rgba(120, 80, 40, 0.18), transparent 70%),
+    linear-gradient(180deg, #0A0A0A 0%, #0F0E12 50%, #0A0A0A 100%);
+  background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+  animation: hero-placeholder-drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes hero-placeholder-drift {
+  0% {
+    background-position: 0% 0%, 100% 100%, 50% 50%, 0% 0%;
+  }
+  100% {
+    background-position: 30% 40%, 70% 60%, 60% 40%, 0% 0%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .hero-placeholder {
+    animation: none;
+  }
   *,
   *::before,
   *::after {
