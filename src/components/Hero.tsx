@@ -35,7 +35,7 @@ export function Hero() {
       />
       <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-bg/85 via-bg/35 to-transparent pointer-events-none" />
 
-      <div className="relative z-10 grid h-full grid-rows-[1fr_auto] p-5 pt-24 md:p-12 md:pt-32">
+      <div className="relative z-10 grid grid-cols-1 h-full grid-rows-[1fr_auto] p-5 pt-24 md:p-12 md:pt-32">
         <div className="flex items-center justify-center">
           <div className="relative">
             <motion.h1
@@ -58,11 +58,8 @@ export function Hero() {
               initial={{ opacity: 0, rotate: -2, x: 30 }}
               animate={{ opacity: 1, rotate: -8, x: 0 }}
               transition={{ duration: 1.0, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="font-script absolute pointer-events-none select-none text-text/95 hidden md:inline-block"
+              className="font-script absolute pointer-events-none select-none text-text/95 right-2 -bottom-1 md:-right-9 md:bottom-2 text-[24px] md:text-[42px] lg:text-[60px] xl:text-[80px]"
               style={{
-                right: '-36px',
-                bottom: '8px',
-                fontSize: 'clamp(36px, 5vw, 84px)',
                 fontWeight: 700,
                 lineHeight: 1,
                 transformOrigin: 'left center',
