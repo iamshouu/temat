@@ -17,14 +17,14 @@ export function Contact() {
         transition={{ duration: 0.9 }}
         className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-10 md:mb-20 bg-clip-text text-transparent"
         style={{
-          fontSize: 'clamp(56px, 12vw, 180px)',
+          fontSize: 'clamp(46px, 12vw, 180px)',
           fontVariationSettings: '"opsz" 32, "wght" 900',
           backgroundImage:
             'linear-gradient(to top, #FFFFFF 0%, #FFFFFF 25%, #BFBFBF 70%, #8A8A8A 100%)',
         }}
       >
         <span className="block">Готов</span>
-        <span className="block pl-[20%]">обсудить?</span>
+        <span className="block pl-0 md:pl-[20%]">обсудить?</span>
       </motion.h2>
 
       <motion.a
