@@ -5,7 +5,7 @@ export const BRAND = 'TematFoundation'
 export const SECTIONS = [
   { id: 'services', label: 'услуги' },
   { id: 'process', label: 'процесс' },
-  { id: 'about', label: 'о мне' },
+  { id: 'about', label: 'о нас' },
   { id: 'contact', label: 'контакты' },
 ] as const
 
