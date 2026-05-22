@@ -61,7 +61,7 @@ export function Contact() {
           rel="noreferrer"
           className="hover:text-accent transition-colors"
         >
-          t.me/Danya_shouuu
+          t.me/Iamshouu
         </a>
       </footer>
     </section>

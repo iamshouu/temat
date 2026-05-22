@@ -1,5 +1,5 @@
-export const TELEGRAM_URL = 'https://t.me/Danya_shouuu'
-export const TELEGRAM_HANDLE = '@Danya_shouuu'
+export const TELEGRAM_URL = 'https://t.me/Iamshouu'
+export const TELEGRAM_HANDLE = '@Iamshouu'
 export const BRAND = 'TematFoundation'
 
 export const SECTIONS = [
