@@ -43,7 +43,7 @@ const SERVICES = [
 export function Services() {
   return (
     <section id="services" className="relative px-6 md:px-12 py-24 md:py-48">
-      <TracingBeam className="pl-4 md:pl-10">
+      <TracingBeam className="pl-10 md:pl-10">
       <SectionLabel label="услуги" count="(4)" />
 
       <motion.h2

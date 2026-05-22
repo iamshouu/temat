@@ -91,7 +91,7 @@ export function Hero() {
             href={TELEGRAM_URL}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center justify-center gap-3 border border-accent px-6 py-3.5 md:py-3 font-mono text-[11px] md:text-[12px] uppercase tracking-[0.2em] text-accent transition-colors duration-300 hover:bg-accent hover:text-bg"
+            className="group flex md:inline-flex w-full md:w-auto items-center justify-center gap-3 border border-accent px-6 py-3.5 md:py-3 font-mono text-[11px] md:text-[12px] uppercase tracking-[0.2em] text-accent transition-colors duration-300 hover:bg-accent hover:text-bg"
           >
             [ написать в telegram&nbsp;→ ]
           </a>
