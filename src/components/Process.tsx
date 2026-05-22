@@ -62,7 +62,7 @@ export function Process() {
   return (
     <section
       id="process"
-      className="relative px-6 md:px-12 py-32 md:py-48 border-t border-muted/20"
+      className="relative px-6 md:px-12 py-24 md:py-48 border-t border-muted/20"
     >
       <SectionLabel label="процесс" />
 
@@ -71,7 +71,7 @@ export function Process() {
         whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-        className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-20 md:mb-32 md:pl-[8%] lg:pl-[12%]"
+        className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-12 md:mb-32 md:pl-[8%] lg:pl-[12%]"
         style={{
           fontSize: 'clamp(48px, 8vw, 120px)',
           fontVariationSettings: '"opsz" 24, "wght" 900',

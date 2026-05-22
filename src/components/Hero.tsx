@@ -35,7 +35,7 @@ export function Hero() {
       />
       <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-bg/85 via-bg/35 to-transparent pointer-events-none" />
 
-      <div className="relative z-10 grid h-full grid-rows-[1fr_auto] p-6 pt-28 md:p-12 md:pt-32">
+      <div className="relative z-10 grid h-full grid-rows-[1fr_auto] p-5 pt-24 md:p-12 md:pt-32">
         <div className="flex items-center justify-center">
           <div className="relative">
             <motion.h1
@@ -44,7 +44,7 @@ export function Hero() {
               transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
               className="font-display font-black uppercase text-center leading-[0.9] tracking-[-0.02em] bg-clip-text text-transparent"
               style={{
-                fontSize: 'clamp(40px, 9vw, 128px)',
+                fontSize: 'clamp(44px, 11vw, 128px)',
                 fontVariationSettings: '"opsz" 32, "wght" 900',
                 backgroundImage:
                   'linear-gradient(to top, #FFFFFF 0%, #FFFFFF 25%, #BFBFBF 70%, #8A8A8A 100%)',
@@ -60,9 +60,9 @@ export function Hero() {
               transition={{ duration: 1.0, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="font-script absolute pointer-events-none select-none text-text/95"
               style={{
-                right: 'clamp(-72px, -6vw, -36px)',
-                bottom: 'clamp(-8px, 1vw, 12px)',
-                fontSize: 'clamp(36px, 5vw, 84px)',
+                right: 'clamp(-40px, -4vw, -24px)',
+                bottom: 'clamp(-4px, 1vw, 12px)',
+                fontSize: 'clamp(28px, 5vw, 84px)',
                 fontWeight: 700,
                 lineHeight: 1,
                 transformOrigin: 'left center',
@@ -78,7 +78,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 pb-2 md:pb-6"
+          className="flex flex-col md:flex-row items-stretch md:items-end justify-between gap-5 md:gap-8 pb-2 md:pb-6"
         >
           <div className="flex flex-col gap-1.5 max-w-md font-mono text-[11px] uppercase tracking-[0.22em]">
             <span className="text-text/80">разработка проектов под:</span>
@@ -91,7 +91,7 @@ export function Hero() {
             href={TELEGRAM_URL}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-3 border border-accent px-6 py-3 font-mono text-[12px] uppercase tracking-[0.2em] text-accent transition-colors duration-300 hover:bg-accent hover:text-bg"
+            className="group inline-flex items-center justify-center gap-3 border border-accent px-6 py-3.5 md:py-3 font-mono text-[11px] md:text-[12px] uppercase tracking-[0.2em] text-accent transition-colors duration-300 hover:bg-accent hover:text-bg"
           >
             [ написать в telegram&nbsp;→ ]
           </a>
@@ -102,7 +102,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.4, duration: 0.6 }}
-        className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 z-10 text-text/70"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-text/70 hidden md:block"
         aria-hidden
       >
         <svg width="26" height="42" viewBox="0 0 26 42" fill="none">

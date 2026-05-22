@@ -45,7 +45,7 @@ export function ChatBubble({ role, name, avatar, time, children, delay = 0 }: Pr
           )}
         </div>
         <div
-          className={`rounded-2xl px-5 py-3 text-[15px] leading-[1.45] ${
+          className={`rounded-2xl px-4 md:px-5 py-3 text-[14px] md:text-[15px] leading-[1.45] ${
             isDev
               ? 'bg-text text-bg rounded-br-sm'
               : 'border border-white/[0.07] bg-white/[0.03] text-text/90 rounded-bl-sm'

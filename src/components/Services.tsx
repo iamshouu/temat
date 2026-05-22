@@ -42,8 +42,8 @@ const SERVICES = [
 
 export function Services() {
   return (
-    <section id="services" className="relative px-6 md:px-12 py-32 md:py-48">
-      <TracingBeam className="pl-6 md:pl-10">
+    <section id="services" className="relative px-6 md:px-12 py-24 md:py-48">
+      <TracingBeam className="pl-4 md:pl-10">
       <SectionLabel label="услуги" count="(4)" />
 
       <motion.h2
@@ -51,7 +51,7 @@ export function Services() {
         whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-        className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-20 md:mb-32 md:pl-[8%] lg:pl-[12%]"
+        className="font-display font-black uppercase leading-[0.9] tracking-[-0.02em] mb-12 md:mb-32 md:pl-[8%] lg:pl-[12%]"
         style={{
           fontSize: 'clamp(48px, 8vw, 120px)',
           fontVariationSettings: '"opsz" 24, "wght" 900',

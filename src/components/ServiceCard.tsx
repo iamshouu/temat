@@ -52,14 +52,14 @@ export function ServiceCard({ title, body, image, badge }: Props) {
           />
         </div>
 
-        <div className="absolute inset-x-0 bottom-0 px-7 md:px-9 pb-7 md:pb-9 z-10 flex flex-col gap-5">
+        <div className="absolute inset-x-0 bottom-0 px-5 sm:px-6 md:px-9 pb-5 sm:pb-6 md:pb-9 z-10 flex flex-col gap-4 md:gap-5">
           <h3
-            className="md:hidden font-display font-black uppercase tracking-[-0.02em] text-3xl leading-[0.95] text-text"
+            className="md:hidden font-display font-black uppercase tracking-[-0.02em] text-2xl sm:text-3xl leading-[0.95] text-text"
             style={{ fontVariationSettings: '"opsz" 24, "wght" 900' }}
           >
             {title}
           </h3>
-          <p className="text-[16px] md:text-[18px] text-text/90 leading-[1.55] max-w-[92%]">
+          <p className="text-[14px] sm:text-[15px] md:text-[18px] text-text/90 leading-[1.55] max-w-[94%]">
             {body}
           </p>
         </div>

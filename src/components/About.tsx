@@ -6,19 +6,19 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative px-6 md:px-12 py-32 md:py-48 border-t border-muted/20"
+      className="relative px-6 md:px-12 py-24 md:py-48 border-t border-muted/20"
     >
       <SectionLabel label="о нас" count="by shou" />
 
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 md:items-start">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 md:items-start">
         <motion.h2
           initial={{ opacity: 0, y: 60, scale: 0.94, filter: 'blur(14px)' }}
           whileInView={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-          className="md:col-span-7 md:pl-[10%] lg:pl-[16%] font-script italic leading-[0.7] -mt-[0.18em] bg-clip-text text-transparent select-none"
+          className="md:col-span-7 md:pl-[10%] lg:pl-[16%] font-script italic leading-[0.85] md:leading-[0.7] md:-mt-[0.18em] bg-clip-text text-transparent select-none"
           style={{
-            fontSize: 'clamp(140px, 22vw, 320px)',
+            fontSize: 'clamp(80px, 22vw, 320px)',
             fontWeight: 700,
             backgroundImage:
               'linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 30%, #BFBFBF 65%, #6E6E6E 100%)',
