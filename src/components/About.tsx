@@ -16,10 +16,11 @@ export function About() {
           whileInView={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-          className="md:col-span-7 md:pl-[10%] lg:pl-[16%] font-script italic leading-[0.85] md:leading-[0.7] md:-mt-[0.18em] bg-clip-text text-transparent select-none"
+          className="md:col-span-7 md:pl-[8%] lg:pl-[12%] min-w-0 font-script italic leading-[0.85] md:leading-[0.75] md:-mt-[0.1em] bg-clip-text text-transparent select-none"
           style={{
-            fontSize: 'clamp(80px, 22vw, 320px)',
+            fontSize: 'clamp(72px, 14vw, 240px)',
             fontWeight: 700,
+            fontFeatureSettings: '"kern"',
             backgroundImage:
               'linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 30%, #BFBFBF 65%, #6E6E6E 100%)',
             filter: 'drop-shadow(0 8px 32px rgba(255,255,255,0.08))',
