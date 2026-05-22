@@ -58,11 +58,11 @@ export function Hero() {
               initial={{ opacity: 0, rotate: -2, x: 30 }}
               animate={{ opacity: 1, rotate: -8, x: 0 }}
               transition={{ duration: 1.0, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="font-script absolute pointer-events-none select-none text-text/95"
+              className="font-script absolute pointer-events-none select-none text-text/95 hidden md:inline-block"
               style={{
-                right: 'clamp(-12px, -2vw, -24px)',
-                bottom: 'clamp(-2px, 1vw, 12px)',
-                fontSize: 'clamp(22px, 5vw, 84px)',
+                right: '-36px',
+                bottom: '8px',
+                fontSize: 'clamp(36px, 5vw, 84px)',
                 fontWeight: 700,
                 lineHeight: 1,
                 transformOrigin: 'left center',
@@ -91,7 +91,7 @@ export function Hero() {
             href={TELEGRAM_URL}
             target="_blank"
             rel="noreferrer"
-            className="group block md:inline-flex w-full md:w-auto text-center md:text-left box-border border border-accent px-4 md:px-6 py-3.5 md:py-3 font-mono text-[10px] md:text-[12px] uppercase tracking-[0.12em] md:tracking-[0.2em] text-accent transition-colors duration-300 hover:bg-accent hover:text-bg md:items-center md:justify-center md:gap-3"
+            className="group block md:inline-flex w-full md:w-auto max-w-full text-center md:text-left box-border border border-accent px-3 md:px-6 py-3 md:py-3 font-mono text-[10px] md:text-[12px] uppercase tracking-[0.1em] md:tracking-[0.2em] text-accent transition-colors duration-300 hover:bg-accent hover:text-bg md:items-center md:justify-center md:gap-3"
           >
             [ написать в telegram&nbsp;→ ]
           </a>
